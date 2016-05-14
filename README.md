@@ -25,6 +25,11 @@ Users will also have facility to associate reviews to the individual book items.
 . . . .  List of software used to develop the app . . . . . . . 
 + AngularJS 1.x
 + Bootstrap 3
++ npm install -save body-parser
++ npm install -save express
++ npm install -save mongoose
++ npm install -save lodash
++ npm install -save shortid
 
 In root folder execute node app.js
 
@@ -82,22 +87,21 @@ Diagram of app's data model (see example below) AND/OR a sample of the test data
 
 ## Web API Endpoint Reference
 
-
-+ GET: /api/library/:id - return a list of users books 
-+ POST: /api/library - add a new book 
++ GET: /api/library/:id - return a list of users books
++ POST: /api/library - add a new book
 + PUT: /posts/api/library/:id - update a book
-+ DELETE: /posts/api/library/:id - delete a book 
++ DELETE: /posts/api/library/:id - delete a book
 
 + GET: /api/users/ - return all users
-+ GET: /api/users/:username - return user with username 
-+ POST: /api/users - add a new user 
-+ PUT: /posts/api/users/:id - update user 
-+ DELETE: /posts/api/users/:id - delete a user 
++ GET: /api/users/:username - return user with username
++ POST: /api/users - add a new user
++ PUT: /posts/api/users/:id - update user
++ DELETE: /posts/api/users/:id - delete a user
 
-+ GET: /api/review/:id - return all reviews for same ISBN 
++ GET: /api/review/:id - return all reviews for same ISBN
 + POST: /api/review - add a new review
-+ PUT: /posts/api/review/:id - update a review 
-+ DELETE: /posts/api/review/:id - delete a review 
++ PUT: /posts/api/review/:id - update a review
++ DELETE: /posts/api/review/:id - delete a review
 
 
 
