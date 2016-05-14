@@ -1,0 +1,24 @@
+
+<div class="row"> 
+
+    <div class="col-md-2">
+
+      Search: <input ng-model="query" placeholder="title">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="title">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+    </div>
+
+   <div class="col-md-10">
+     <ul  class="books">
+        <li ng-repeat="book in books | filter:{title: query } | orderBy:orderProp" class="thumbnail">
+           <a href="#/books/{{book.title}}" class="thumb"><img ng-src="{{book.imageUrl}}"></a>
+           <a href="">{{book.title}}</a>
+           <p>Author: {{book.Author}}</p>
+           <p>Description: {{book.Description}}</p>
+        </li>
+      </ul>
+    </div>
+</div>

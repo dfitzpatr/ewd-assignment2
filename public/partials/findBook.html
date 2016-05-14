@@ -1,0 +1,71 @@
+  <!-- ng-click="$event.preventDefault()" -->
+  <div id="nav">
+  <ul>
+    <li> <a href="#/mediaList/{{UserId}}" class="home" ng-click="active='home'"> <h3 class="Title"> Home Library Application</h3> </a> </li>
+    <!--<li> <a href=""ng-click="$event.preventDefault()"><h3></h3></a></li> -->
+    <li> <a href="#/" class="logout" ng-click="active='logout'"><h3>Logout {{firstName}}</h3></a></li>
+    <!-- <li> <input type="text" ng-model="searchString" placeholder="Search for your items" /></li> -->
+  </ul>
+  </div>
+
+    <div class="container">
+
+	   <div ng-show="error" class="alert alert-danger">{{error}}</div>
+
+     <form ng-submit="findBook()"
+        style="margin-top:30px;">
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="ISBN"
+      ng-required
+          ng-model="submit_isbn"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Find</button>
+      </form>
+
+
+     <form ng-submit="addBook()"
+        style="margin-top:30px;">
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+		  ng-required
+          ng-model="title"></input>
+        </div>
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+      ng-required
+          ng-model="author"></input>
+        </div>
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+      ng-required
+          ng-model="description"></input>
+        </div>
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+      ng-required
+          ng-model="upvotes"></input>
+        </div>
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+      ng-required
+          ng-model="imageURL"></input>
+        </div>
+        
+        <div class="form-group">
+          <input type="text" readonly="readonly"
+          class="form-control"
+      ng-required
+          ng-model="genre"></input>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" ng-hide="title=='Book not found'">Add Book</button>
+      </form>
+
+</div>

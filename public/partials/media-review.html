@@ -1,0 +1,89 @@
+  <!-- ng-click="$event.preventDefault()" -->
+  <div id="nav">
+  <ul>
+    <li> <a href="#/mediaList/{{UserId}}" class="home" ng-click="active='home'"> <h3 class="Title"> Home Library Application</h3> </a> </li>
+    <!--<li> <a href=""ng-click="$event.preventDefault()"><h3></h3></a></li> -->
+    <li> <a href="#/" class="logout" ng-click="active='logout'"><h3>Logout {{firstName}}</h3></a></li>
+<!--    <li> <input type="text" ng-model="searchString" placeholder="Search for your items" /></li> -->
+  </ul>
+  </div>
+
+
+
+ <div>
+      <div class="page-header">
+        <h3>
+          <a>
+            {{title}}
+          </a>
+          <span style="font-size:20px; margin-left:10px;" ng-show=false> <!-- ng-show=false -->
+            {{ISBN}}
+          </span>
+        </h3>
+      </div>
+
+      <div class="reviewlist">
+
+        <div class="postReview">
+
+          <form ng-submit="addReview()"
+            style="margin-top:30px;">
+            <h3>Add a new review</h3>
+            <div class="form-group">
+              <input type="text"
+              class="form-control"
+              ng-model="enterReview"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Post</button>
+          </form>
+        </div>
+        
+        <table class="table table-bordered">
+          <thead>
+            <th class="author" ></th>
+            <th class="userReview" ></th>
+            <th class="id" ></th>
+            <th class="ISBN" ></th>
+            <th class="userId" ></th>
+            <th class="button1" ng-show=false>
+            <th class="button2" ng-show=false>
+
+          </thead>
+        <tbody ng-repeat="review in mediaReviews | orderBy:'_id'" ng-switch="review.state" >
+        <!-- Deleted Mode Template -->
+        <tr class="danger" ng-switch-when="deleted">
+             <td>{{review.author}}</td>
+             <td>{{review.userReview}}</td>
+             <td ng-show=false>{{review._id}}</td>
+             <td ng-show=false>{{review.ISBN}}</td>
+             <td ng-show=false>{{review.userId}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" ng-click="confirmDelete($index)" value="Confirm" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" ng-click="undoDelete(review)" value="Undo"/>
+            </td>
+        </tr>
+
+
+        <!-- Normal Mode Template -->            
+        <tr ng-switch-default>
+             <td>{{review.author}}</td>
+             <td>{{review.userReview}}</td>
+             <td ng-show=false>{{review._id}}</td>
+             <td ng-show=false>{{review.ISBN}}</td>
+             <td ng-show=false>{{review.userId}}</td>
+             <td>
+                <input ng-show="review.userId==UserId" type="button" class="btn btn-danger" ng-click="deleteReview(review)" value="Delete"/>
+              </td>
+          </tr>
+        </tbody>
+        </table>
+
+      </div>
+
+
+</div>
+
+
+

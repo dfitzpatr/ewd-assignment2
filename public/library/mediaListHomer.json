@@ -1,0 +1,71 @@
+[
+	{	
+		"id": 0,
+		"title": "The Hitchhiker's guide to the galaxy", 
+		"Author": "Douglas Adams", 
+		"Description": "It’s an ordinary Thursday lunchtime for Arthur Dent until his house gets demolished. The Earth follows shortly afterwards to make way for a new hyperspace bypass and his best friend has just announced that he’s an alien. At this moment, they’re hurtling through space with nothing but their towels and an innocuous-looking book inscribed with the big, friendly words: DON’T PANIC.",
+		"Genre": "Scifi",
+		"type": "book",
+        "upvotes" : 5, 
+		"imageUrl": "img/books/hitchhikersGuide.jpg",
+		"reviews": 	[
+						{
+							"body": "this is a funny book",
+							"author": "Marge",
+							"upvotes": 3
+						},
+						{
+							"body": "this is a good triller",
+							"author": "Homer",
+							"upvotes": 5
+						}
+
+					]
+	},
+	{
+		"id": 1,
+		"title": "The Lost Fleet - Dauntless",
+		"Author": "Jack Campbell",
+		"Description": "The Alliance has been fighting the Syndic for a century, and losing badly. Now its fleet is crippled and stranded in enemy territory. Their only hope is Captain John 'Black Jack' Geary a man who has emerged from a century-long hibernation to find himself heroically idealized beyond belief. Now, he must live up to his own legend.",
+		"Genre": "Scifi",
+		"type": "book",
+	    "upvotes" : 10,
+		"imageUrl": "img/books/TheLostFleet.jpg",
+		"reviews": 	[
+						{
+							"body": "this is a interesting book",
+							"author": "Marge",
+							"upvotes": 3
+						},
+						{
+							"body": "this is a good triller",
+							"author": "Homer",
+							"upvotes": 5
+						}
+
+					]
+	},
+	{
+		"id": 2,
+		"title": "Wounds of Honour: Empire I",
+		"Author": "Anthony Riches",
+		"Description": "Marcus Valerius Aquila has scarcely landed in Britannia when he has to run for his life - condemned to dishonorable death by power-crazed emperor Commodus. The plan is to take a new name, serve in an obscure regiment on Hadrian's Wall and lie low until he can hope for justice. Then a rebel army sweeps down from the wastes north of the Wall, and Marcus has to prove he's hard enough to lead a century in the front line of a brutal, violent war.",
+		"Genre": "Action Adventure",
+		"type": "book",
+	    "upvotes" : 10,
+		"imageUrl": "img/books/EmpireWoundsofHonor.jpg",
+		"reviews": 	[
+						{
+							"body": "this is a good book",
+							"author": "Marge",
+							"upvotes": 3
+						},
+						{
+							"body": "this is a good triller",
+							"author": "Homer",
+							"upvotes": 5
+						}
+
+					]
+	}
+]

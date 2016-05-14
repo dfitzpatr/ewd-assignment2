@@ -1,0 +1,48 @@
+[
+	{	
+		"id": 0, 
+		"title": "Make Me", 
+		"Author": "Lee Child", 
+		"Description": "IJack Reacher has no place to go, and all the time in the world to get there, so a remote railroad stop on the prairie with the curious name of Mother's Rest seems perfect for an aimless one-day stopover. He expects to find a lonely pioneer tombstone in a sea of nearly-ripe wheat ... but instead there is a woman waiting for a missing colleague, a cryptic note about two hundred deaths, and a small town full of silent, watchful people",
+		"Genre": "Triller",
+		"type": "book",
+        "upvotes" : 6, 
+		"imageUrl": "img/books/JackReacherMakeMe.jpg",
+		"reviews": 	[
+						{
+							"body": "this is a good book",
+							"author": "Marge",
+							"upvotes": 3
+						},
+						{
+							"body": "this is a good triller",
+							"author": "Homer",
+							"upvotes": 5
+						}
+
+					]
+	},
+	{
+		"id": 1, 
+		"title": "Blood Song: Book 1 of Raven's Shadow",
+		"Author": "Anthony Ryan",
+		"Description": "We have fought battles that left more than a hundred corpses on the ground and not a word of it has ever been set down. The Order fights, but often it fights in shadow, without glory or reward. We have no banners. Vaelin Al Sorna is the Sixth Order's newest recruit. Under their brutal training regime, he learns how to forge a blade, survive the wilds and kill a man quickly and quietly - all in the name of protecting the Realm and the Faith.",
+		"Genre": "Fantasy",
+		"type": "book",
+	    "upvotes" : 10,
+		"imageUrl": "img/books/bloodSong.jpg",
+		"reviews": 	[
+						{
+							"body": "this is a good book",
+							"author": "Marge",
+							"upvotes": 3
+						},
+						{
+							"body": "this is a good triller",
+							"author": "Homer",
+							"upvotes": 5
+						}
+
+					]
+	}
+]

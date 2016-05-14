@@ -1,0 +1,20 @@
+
+{ 
+	"Users" :
+			[
+				{	"id": 0,
+					"firstName": "Homer",
+					"lastName": "Simpson",
+					"username": "homer@Simpson.com",
+					"password": "secret"
+				},
+				{
+					"id":1,
+					"firstName": "Marge",
+					"lastName": "Simpson",
+					"username": "marge@Simpson.com",
+					"password": "secret"
+				}
+			]
+
+}

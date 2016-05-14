@@ -1,0 +1,113 @@
+<div>
+  <!-- ng-click="$event.preventDefault()" -->
+	
+  <div id="nav">
+  <ul>
+    <li> <a href="#/mediaList/{{UserId}}" class="home" ng-click="active='home'"> <h3 class="Title"> Home Library Application</h3> </a> </li>
+    <li> <a href="#/findBook/{{UserId}}" class="findBook" ng-click="active='findBook'"> <h3 class="findBook"> Find New Book</h3> </a> </li>
+  <!--  <li> <a href=""ng-click="$event.preventDefault()"><h3></h3></a></li> -->
+    <li> <a href="#/" class="logout" ng-click="active='logout'"><h3>Logout {{firstName}}</h3></a></li>
+    <li> <input type="text" ng-model="searchString" placeholder="Search for your items" /></li>
+  </ul>
+  </div>
+
+      
+<!-- ng-controller="ContactsController" -->
+
+  <div  >
+      <table class="table table-bordered">
+        <thead>
+          <th class="image" ></th>
+          <th class="title">
+            <a href="#" ng-click="$event.preventDefault(); orderByField='title'; reverseSort = !reverseSort"> Title 
+                    <span ng-show="orderByField == 'title'">
+                    <span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+            </a>
+          </th>
+          <th class="Author">
+            <a href="" ng-click="$event.preventDefault(); orderByField='author'; reverseSort = !reverseSort"> Author
+                    <span ng-show="orderByField == 'author'">
+                    <span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+            </a>
+          </th>
+
+          <th class="description">Description</th>
+
+          <th class="Genre">
+            <a href="" ng-click="$event.preventDefault(); orderByField='genre'; reverseSort = !reverseSort"> Genre
+                    <span ng-show="orderByField == 'genre'">
+                    <span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+            </a>
+          </th>
+
+          <th class="type">
+            <a href="#" ng-click="$event.preventDefault(); orderByField='type'; reverseSort = !reverseSort"> Type
+                    <span ng-show="orderByField == 'type'">
+                    <span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+            </a>
+
+          </th>
+          <th class="upvotes">
+            <a href="#" ng-click="$event.preventDefault(); orderByField='upvotes'; reverseSort = !reverseSort"> Likes
+                    <span ng-show="orderByField == 'upvotes'">
+                    <span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+            </a>
+          </th>
+          <th class="id" ng-show=false>
+          <th class="userId" ng-show=false>
+          <th class="ISBN" ng-show=false>
+          <th class="button1" ng-show=false>
+          <th class="button2" ng-show=false>
+          </th>
+        </thead>
+
+        <tbody ng-repeat="media in mediaList | filter: searchString | orderBy:orderByField:reverseSort" ng-switch="media.state" >
+          <!-- Normal Mode Template -->
+        <!-- Deleted Mode Template -->
+        <tr class="danger" ng-switch-when="deleted">
+           <td> <a href="#/mediaList/{{UserId}}/media-review/{{media.ISBN}}/{{media.title}}" class="thumb"><img ng-src="{{media.imageURL}}"></a></td>
+           <td> <a href="#/mediaList/{{UserId}}/media-review/{{media.ISBN}}/{{media.title}}">{{media.title}}</a> </td>
+           <td>{{media.author}}</td>
+           <td>{{media.description}}</td>
+           <td>{{media.genre}}</td>
+           <td>{{media.type}}</td>
+           <td>
+                <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(media)"></span>
+                     {{media.upvotes}}
+            </td>
+           <td ng-show=false>{{media._id}}</td>
+           <td ng-show=false>{{media.userId}}</td>
+           <td ng-show=false>{{media.ISBN}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" ng-click="confirmDelete($index)" value="Confirm" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" ng-click="undoDelete(media)" value="Undo"/>
+            </td>
+        </tr>
+        <!-- Normal Mode Template -->            
+        <tr ng-switch-default>
+           <td> <a href="#/mediaList/{{UserId}}/media-review/{{media.ISBN}}/{{media.title}}" class="thumb"><img ng-src="{{media.imageURL}}"></a></td>
+           <td> <a href="#/mediaList/{{UserId}}/media-review/{{media.ISBN}}/{{media.title}}">{{media.title}}</a> </td>
+           <td>{{media.author}}</td>
+           <td>{{media.description}}</td>
+           <td>{{media.genre}}</td>
+           <td>{{media.type}}</td>
+           <td>
+                <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(media)"></span>
+                     {{media.upvotes}}
+            </td>
+           <td ng-show=false>{{media._id}}</td>
+           <td ng-show=false>{{media.userId}}</td>
+           <td ng-show=false>{{media.ISBN}}</td>
+           <td>
+              <input type="button" class="btn btn-danger" ng-click="deleteMedia(media)" value="Delete"/>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+  </div>
+
+</div>
