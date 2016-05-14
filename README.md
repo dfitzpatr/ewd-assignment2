@@ -82,25 +82,22 @@ Diagram of app's data model (see example below) AND/OR a sample of the test data
 
 ## Web API Endpoint Reference
 
-Describe your web API.
 
-| HTTP Verb & Path |  Description |
-| -- | -- |
-| GET: /api/library/:id |return a list of users books |
-| POST: /api/library |add a new book |
-| PUT: /posts/api/library/:id | update a book |
-| DELETE: /posts/api/library/:id | delete a book |
-| -- | -- |
-| GET: /api/users/ |return all users |
-| GET: /api/users/:username |return user with username |
-| POST: /api/users |add a new user |
-| PUT: /posts/api/users/:id | update user |
-| DELETE: /posts/api/users/:id | delete a user |
-| -- | -- |
-| GET: /api/review/:id |return all reviews for same ISBN |
-| POST: /api/review |add a new review |
-| PUT: /posts/api/review/:id | update a review |
-| DELETE: /posts/api/review/:id | delete a review |
++ GET: /api/library/:id - return a list of users books 
++ POST: /api/library - add a new book 
++ PUT: /posts/api/library/:id - update a book
++ DELETE: /posts/api/library/:id - delete a book 
+
++ GET: /api/users/ - return all users
++ GET: /api/users/:username - return user with username 
++ POST: /api/users - add a new user 
++ PUT: /posts/api/users/:id - update user 
++ DELETE: /posts/api/users/:id - delete a user 
+
++ GET: /api/review/:id - return all reviews for same ISBN 
++ POST: /api/review - add a new review
++ PUT: /posts/api/review/:id - update a review 
++ DELETE: /posts/api/review/:id - delete a review 
 
 
 
